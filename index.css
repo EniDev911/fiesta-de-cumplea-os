@@ -13,20 +13,25 @@ body {
   align-items: flex-start;
   min-height: 100vh;
   text-align: center;
+  width: 100vw;
   overflow: hidden;
 }
 
 .card {
-  width: 640px;
-  height: 400px;
+  width: 340px;
+  height: 200px;
   position: absolute;
   margin: auto;
   left: 0;
   right: 0;
   top: 0;
   bottom: 0;
-  -webkit-perspective: 1200px;
-  perspective: 1200px;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  -webkit-perspective: 600px;
+  perspective: 600px;
   transition: 1s;
 }
 
@@ -94,24 +99,24 @@ body {
 .cake {
   width: 100%;
   position: absolute;
-  bottom: 30px;
+  bottom: 20px;
 }
 
 .top-layer,
 .middle-layer,
 .bottom-layer {
-  height: 80px;
-  width: 240px;
+  height: 40px;
+  width: 120px;
   background-repeat: repeat;
-  background-size: 60px 100px;
-  background-position: 28px 0;
-  background-image: linear-gradient(transparent 50px,
-      #fedbab 50px,
-      #fedbab 50px,
-      transparent 60px),
-    radial-gradient(circle at 30px 5px,
-      #994c10 30px,
-      #fcbf29 31px);
+  background-size: 30px 50px;
+  background-position: 14px 0;
+  background-image: linear-gradient(transparent 25px,
+      #fedbab 25px,
+      #fedbab 25px,
+      transparent 30px),
+    radial-gradient(circle at 15px 2.5px,
+      #994c10 15px,
+      #fcbf29 16px);
   border-radius: 10px 10px 0 0;
   position: relative;
   margin: auto;
@@ -119,47 +124,141 @@ body {
 
 .middle-layer {
   transform: scale(0.85);
-  top: 6px;
+  top: 3px;
 }
 
 .top-layer {
   transform: scale(0.7);
-  top: 26px;
+  top: 13px;
 }
 
 .candle {
-  height: 45px;
-  width: 15px;
+  height: 22.5px;
+  width: 7.5px;
   background: repeating-linear-gradient(45deg,
       #fd3018 0,
-      #fd3018 5px,
-      #ffa89e 5px,
-      #ffa89e 10px);
+      #fd3018 2.5px,
+      #ffa89e 2.5px,
+      #ffa89e 5px);
   position: absolute;
   margin: auto;
   left: 0;
   right: 0;
-  bottom: 202px;
+  bottom: 101px;
 }
 
 .candle:before {
   content: "";
   position: absolute;
-  height: 16px;
-  width: 16px;
+  height: 8px;
+  width: 8px;
   background: #ffa500;
   border-radius: 0 50% 50% 50%;
-  bottom: 48px;
+  bottom: 24px;
   transform: rotate(45deg);
-  left: -1px;
+  left: -0.1px;
 }
 
 .outside p {
-  font-size: 23px;
-  padding-top: 10px;
+  font-size: 12px;
+  padding-top: 5px;
   text-transform: uppercase;
   text-align: center;
   letter-spacing: 3px;
   font-family: sans-serif;
   color: #000046;
+}
+
+.inside p {
+  font-size: 8px;
+}
+
+@media(min-width: 992px) {
+  .card {
+    width: 640px;
+    height: 400px;
+    -webkit-perspective: 1200px;
+    perspective: 1200px;
+  }
+
+  .cake {
+    width: 100%;
+    position: absolute;
+    bottom: 30px;
+  }
+
+  .top-layer,
+  .middle-layer,
+  .bottom-layer {
+    height: 80px;
+    width: 240px;
+    background-repeat: repeat;
+    background-size: 60px 100px;
+    background-position: 28px 0;
+    background-image: linear-gradient(transparent 50px,
+        #fedbab 50px,
+        #fedbab 50px,
+        transparent 60px),
+      radial-gradient(circle at 30px 5px,
+        #994c10 30px,
+        #fcbf29 31px);
+    border-radius: 10px 10px 0 0;
+    position: relative;
+    margin: auto;
+  }
+
+  .middle-layer {
+    transform: scale(0.85);
+    top: 6px;
+  }
+
+  .top-layer {
+    transform: scale(0.7);
+    top: 26px;
+  }
+
+  .cake {
+    width: 100%;
+    position: absolute;
+    bottom: 30px;
+  }
+
+  .candle {
+    height: 45px;
+    width: 15px;
+    background: repeating-linear-gradient(45deg,
+        #fd3018 0,
+        #fd3018 5px,
+        #ffa89e 5px,
+        #ffa89e 10px);
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 202px;
+  }
+
+  .candle:before {
+    content: "";
+    position: absolute;
+    height: 16px;
+    width: 16px;
+    background: #ffa500;
+    border-radius: 0 50% 50% 50%;
+    bottom: 48px;
+    transform: rotate(45deg);
+    left: -0.1px;
+  }
+
+  .outside p {
+    font-size: 24px;
+    padding-top: 10px;
+    letter-spacing: 3px;
+    font-family: sans-serif;
+    color: #000046;
+  }
+
+  .inside p {
+    font-size: 16px;
+  }
 }
