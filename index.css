@@ -124,7 +124,7 @@ body {
 
 .middle-layer {
   transform: scale(0.85);
-  top: 3px;
+  top: 3.5px;
 }
 
 .top-layer {
@@ -171,6 +171,7 @@ body {
 
 .inside p {
   font-size: 8px;
+  line-height: 2;
 }
 
 .footer {
